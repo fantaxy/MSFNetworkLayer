@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		933C6CBF1CE3178D002C9B67 /* MSFNetworkProxy.mm in Sources */ = {isa = PBXBuildFile; fileRef = 933C6CBE1CE3178D002C9B67 /* MSFNetworkProxy.mm */; };
+		933C6CE71CE334BA002C9B67 /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 933C6CE41CE334BA002C9B67 /* libprotobuf.a */; };
+		933C6CE81CE334BA002C9B67 /* MsfSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933C6CE51CE334BA002C9B67 /* MsfSDK.framework */; };
+		933C6CE91CE334BA002C9B67 /* QALSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933C6CE61CE334BA002C9B67 /* QALSDK.framework */; };
+		933C6CEB1CE33526002C9B67 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933C6CEA1CE33526002C9B67 /* CoreTelephony.framework */; };
 		9341BCA91CDF314600E38B7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9341BCA81CDF314600E38B7B /* main.m */; };
 		9341BCAC1CDF314600E38B7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9341BCAB1CDF314600E38B7B /* AppDelegate.m */; };
 		9341BCAF1CDF314600E38B7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9341BCAE1CDF314600E38B7B /* ViewController.m */; };
@@ -17,8 +22,6 @@
 		9341BCCD1CDF314600E38B7B /* MSFNetworkLayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9341BCCC1CDF314600E38B7B /* MSFNetworkLayerUITests.m */; };
 		9341BCDB1CDF318900E38B7B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9341BCDA1CDF318900E38B7B /* SystemConfiguration.framework */; };
 		9341BCDD1CDF319300E38B7B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9341BCDC1CDF319300E38B7B /* CoreLocation.framework */; };
-		9341BCDF1CDF31BC00E38B7B /* MsfSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9341BCDE1CDF31BC00E38B7B /* MsfSDK.framework */; };
-		9341BCE51CE22C0400E38B7B /* MSFNetworkProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9341BCE41CE22C0400E38B7B /* MSFNetworkProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		933C6CBD1CE3178D002C9B67 /* MSFNetworkProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSFNetworkProxy.h; sourceTree = "<group>"; };
+		933C6CBE1CE3178D002C9B67 /* MSFNetworkProxy.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MSFNetworkProxy.mm; sourceTree = "<group>"; };
+		933C6CC01CE3179B002C9B67 /* IMSFDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMSFDelegate.h; sourceTree = "<group>"; };
+		933C6CC31CE31D6E002C9B67 /* MNL-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MNL-PrefixHeader.pch"; sourceTree = "<group>"; };
+		933C6CE41CE334BA002C9B67 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libprotobuf.a; sourceTree = "<group>"; };
+		933C6CE51CE334BA002C9B67 /* MsfSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MsfSDK.framework; sourceTree = "<group>"; };
+		933C6CE61CE334BA002C9B67 /* QALSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QALSDK.framework; sourceTree = "<group>"; };
+		933C6CEA1CE33526002C9B67 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		9341BCA41CDF314600E38B7B /* MSFNetworkLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSFNetworkLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9341BCA81CDF314600E38B7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9341BCAA1CDF314600E38B7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,9 +68,6 @@
 		9341BCCE1CDF314600E38B7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9341BCDA1CDF318900E38B7B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9341BCDC1CDF319300E38B7B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		9341BCDE1CDF31BC00E38B7B /* MsfSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MsfSDK.framework; path = MSFNetworkLayer/MsfSDK.framework; sourceTree = "<group>"; };
-		9341BCE31CE22C0400E38B7B /* MSFNetworkProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSFNetworkProxy.h; sourceTree = "<group>"; };
-		9341BCE41CE22C0400E38B7B /* MSFNetworkProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSFNetworkProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +75,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				933C6CEB1CE33526002C9B67 /* CoreTelephony.framework in Frameworks */,
+				933C6CE81CE334BA002C9B67 /* MsfSDK.framework in Frameworks */,
 				9341BCDD1CDF319300E38B7B /* CoreLocation.framework in Frameworks */,
-				9341BCDF1CDF31BC00E38B7B /* MsfSDK.framework in Frameworks */,
+				933C6CE71CE334BA002C9B67 /* libprotobuf.a in Frameworks */,
+				933C6CE91CE334BA002C9B67 /* QALSDK.framework in Frameworks */,
 				9341BCDB1CDF318900E38B7B /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,10 +101,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		933C6CBC1CE3178D002C9B67 /* MSFNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				933C6CC01CE3179B002C9B67 /* IMSFDelegate.h */,
+				933C6CBD1CE3178D002C9B67 /* MSFNetworkProxy.h */,
+				933C6CBE1CE3178D002C9B67 /* MSFNetworkProxy.mm */,
+			);
+			path = MSFNetwork;
+			sourceTree = "<group>";
+		};
+		933C6CE31CE334BA002C9B67 /* extern */ = {
+			isa = PBXGroup;
+			children = (
+				933C6CE41CE334BA002C9B67 /* libprotobuf.a */,
+				933C6CE51CE334BA002C9B67 /* MsfSDK.framework */,
+				933C6CE61CE334BA002C9B67 /* QALSDK.framework */,
+			);
+			path = extern;
+			sourceTree = "<group>";
+		};
 		9341BC9B1CDF314600E38B7B = {
 			isa = PBXGroup;
 			children = (
-				9341BCDE1CDF31BC00E38B7B /* MsfSDK.framework */,
+				933C6CEA1CE33526002C9B67 /* CoreTelephony.framework */,
 				9341BCDC1CDF319300E38B7B /* CoreLocation.framework */,
 				9341BCDA1CDF318900E38B7B /* SystemConfiguration.framework */,
 				9341BCA61CDF314600E38B7B /* MSFNetworkLayer */,
@@ -116,7 +147,7 @@
 		9341BCA61CDF314600E38B7B /* MSFNetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				9341BCE01CE22B5500E38B7B /* MSFNetWork */,
+				933C6CBC1CE3178D002C9B67 /* MSFNetwork */,
 				9341BCAA1CDF314600E38B7B /* AppDelegate.h */,
 				9341BCAB1CDF314600E38B7B /* AppDelegate.m */,
 				9341BCAD1CDF314600E38B7B /* ViewController.h */,
@@ -124,7 +155,7 @@
 				9341BCB01CDF314600E38B7B /* Main.storyboard */,
 				9341BCB31CDF314600E38B7B /* Assets.xcassets */,
 				9341BCB51CDF314600E38B7B /* LaunchScreen.storyboard */,
-				9341BCB81CDF314600E38B7B /* Info.plist */,
+				933C6CE31CE334BA002C9B67 /* extern */,
 				9341BCA71CDF314600E38B7B /* Supporting Files */,
 			);
 			path = MSFNetworkLayer;
@@ -133,6 +164,8 @@
 		9341BCA71CDF314600E38B7B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9341BCB81CDF314600E38B7B /* Info.plist */,
+				933C6CC31CE31D6E002C9B67 /* MNL-PrefixHeader.pch */,
 				9341BCA81CDF314600E38B7B /* main.m */,
 			);
 			name = "Supporting Files";
@@ -154,15 +187,6 @@
 				9341BCCE1CDF314600E38B7B /* Info.plist */,
 			);
 			path = MSFNetworkLayerUITests;
-			sourceTree = "<group>";
-		};
-		9341BCE01CE22B5500E38B7B /* MSFNetWork */ = {
-			isa = PBXGroup;
-			children = (
-				9341BCE31CE22C0400E38B7B /* MSFNetworkProxy.h */,
-				9341BCE41CE22C0400E38B7B /* MSFNetworkProxy.m */,
-			);
-			name = MSFNetWork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,7 +321,7 @@
 			files = (
 				9341BCAF1CDF314600E38B7B /* ViewController.m in Sources */,
 				9341BCAC1CDF314600E38B7B /* AppDelegate.m in Sources */,
-				9341BCE51CE22C0400E38B7B /* MSFNetworkProxy.m in Sources */,
+				933C6CBF1CE3178D002C9B67 /* MSFNetworkProxy.mm in Sources */,
 				9341BCA91CDF314600E38B7B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +403,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MSFNetworkLayer/MNL-PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -392,6 +418,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lz";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -421,6 +448,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MSFNetworkLayer/MNL-PrefixHeader.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -429,6 +458,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-lz";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -442,9 +472,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MSFNetworkLayer",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/MSFNetworkLayer/extern",
 				);
 				INFOPLIST_FILE = MSFNetworkLayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MSFNetworkLayer/extern",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = fantaxy.MSFNetworkLayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -457,9 +493,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MSFNetworkLayer",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/MSFNetworkLayer/extern",
 				);
 				INFOPLIST_FILE = MSFNetworkLayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MSFNetworkLayer/extern",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = fantaxy.MSFNetworkLayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -532,6 +574,7 @@
 				9341BCD31CDF314600E38B7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9341BCD41CDF314600E38B7B /* Build configuration list for PBXNativeTarget "MSFNetworkLayerTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +583,7 @@
 				9341BCD61CDF314600E38B7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9341BCD71CDF314600E38B7B /* Build configuration list for PBXNativeTarget "MSFNetworkLayerUITests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +592,7 @@
 				9341BCD91CDF314600E38B7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

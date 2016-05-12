@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IMSFDelegate.h"
 
 @interface MSFNetworkProxy : NSObject
+
+@property (nonatomic, weak) id<IMSFDelegate> msfDelegate;
 
 - (int)preSendWupBuffer;
 

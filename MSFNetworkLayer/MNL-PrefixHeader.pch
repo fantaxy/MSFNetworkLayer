@@ -1,0 +1,14 @@
+//
+//  MNL-PrefixHeader.pch
+//  MSFNetworkLayer
+//
+//  Created by Fanta Xu on 16/5/11.
+//  Copyright © 2016年 Fanta Xu. All rights reserved.
+//
+
+#ifndef MNL_PrefixHeader_pch
+#define MNL_PrefixHeader_pch
+
+#define FATLog(s, ... ) NSLog( @"[%s]-->[message: %@]", __PRETTY_FUNCTION__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+
+#endif /* MNL_PrefixHeader_pch */
