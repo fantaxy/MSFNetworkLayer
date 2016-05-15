@@ -13,7 +13,9 @@
 
 @property (nonatomic, weak) id<IMSFDelegate> msfDelegate;
 
-- (int)preSendWupBuffer;
++ (instancetype)getInstance;
+
+- (NSNumber *)preSendWupBuffer;
 
 - (BOOL)sendWupBuffer:(unsigned char *)pWup cmd:(NSString *)cmd resendSeq:(int)iResendReq seq:(int *)pSeq immediately:(BOOL)bImmediately timeOut:(int)iInterval;
 - (int)cancelMSFPacket:(int)seq;

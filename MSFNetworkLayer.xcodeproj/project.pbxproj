@@ -22,6 +22,13 @@
 		9341BCCD1CDF314600E38B7B /* MSFNetworkLayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9341BCCC1CDF314600E38B7B /* MSFNetworkLayerUITests.m */; };
 		9341BCDB1CDF318900E38B7B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9341BCDA1CDF318900E38B7B /* SystemConfiguration.framework */; };
 		9341BCDD1CDF319300E38B7B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9341BCDC1CDF319300E38B7B /* CoreLocation.framework */; };
+		9357E2AA1CE869DF003633A9 /* GSRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9357E2A91CE869DF003633A9 /* GSRequestManager.m */; };
+		93D9A3EC1CE86FA400B7A98F /* GSCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D9A3E31CE86FA400B7A98F /* GSCache.m */; };
+		93D9A3ED1CE86FA400B7A98F /* GSCacheObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D9A3E51CE86FA400B7A98F /* GSCacheObject.m */; };
+		93D9A3EE1CE86FA400B7A98F /* GSBaseRequest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 93D9A3E71CE86FA400B7A98F /* GSBaseRequest.mm */; };
+		93D9A3EF1CE86FA400B7A98F /* GSDebugLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D9A3E91CE86FA400B7A98F /* GSDebugLabel.m */; };
+		93D9A4141CE8CF2600B7A98F /* UIView+Positioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D9A4131CE8CF2600B7A98F /* UIView+Positioning.m */; };
+		93D9A4171CE8CF4200B7A98F /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D9A4161CE8CF4200B7A98F /* AFNetworkReachabilityManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +75,20 @@
 		9341BCCE1CDF314600E38B7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9341BCDA1CDF318900E38B7B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9341BCDC1CDF319300E38B7B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9357E2A81CE869DF003633A9 /* GSRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GSRequestManager.h; path = ../MSFNetwork/GSRequestManager.h; sourceTree = "<group>"; };
+		9357E2A91CE869DF003633A9 /* GSRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GSRequestManager.m; path = ../MSFNetwork/GSRequestManager.m; sourceTree = "<group>"; };
+		93D9A3E21CE86FA400B7A98F /* GSCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCache.h; sourceTree = "<group>"; };
+		93D9A3E31CE86FA400B7A98F /* GSCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCache.m; sourceTree = "<group>"; };
+		93D9A3E41CE86FA400B7A98F /* GSCacheObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCacheObject.h; sourceTree = "<group>"; };
+		93D9A3E51CE86FA400B7A98F /* GSCacheObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCacheObject.m; sourceTree = "<group>"; };
+		93D9A3E61CE86FA400B7A98F /* GSBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSBaseRequest.h; sourceTree = "<group>"; };
+		93D9A3E71CE86FA400B7A98F /* GSBaseRequest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GSBaseRequest.mm; sourceTree = "<group>"; };
+		93D9A3E81CE86FA400B7A98F /* GSDebugLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDebugLabel.h; sourceTree = "<group>"; };
+		93D9A3E91CE86FA400B7A98F /* GSDebugLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSDebugLabel.m; sourceTree = "<group>"; };
+		93D9A4121CE8CF2600B7A98F /* UIView+Positioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Positioning.h"; sourceTree = "<group>"; };
+		93D9A4131CE8CF2600B7A98F /* UIView+Positioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Positioning.m"; sourceTree = "<group>"; };
+		93D9A4151CE8CF4200B7A98F /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		93D9A4161CE8CF4200B7A98F /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +168,7 @@
 		9341BCA61CDF314600E38B7B /* MSFNetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				93D9A3E01CE86FA400B7A98F /* GSRequest */,
 				933C6CBC1CE3178D002C9B67 /* MSFNetwork */,
 				9341BCAA1CDF314600E38B7B /* AppDelegate.h */,
 				9341BCAB1CDF314600E38B7B /* AppDelegate.m */,
@@ -155,6 +177,7 @@
 				9341BCB01CDF314600E38B7B /* Main.storyboard */,
 				9341BCB31CDF314600E38B7B /* Assets.xcassets */,
 				9341BCB51CDF314600E38B7B /* LaunchScreen.storyboard */,
+				93D9A4111CE8CF2600B7A98F /* util */,
 				933C6CE31CE334BA002C9B67 /* extern */,
 				9341BCA71CDF314600E38B7B /* Supporting Files */,
 			);
@@ -187,6 +210,42 @@
 				9341BCCE1CDF314600E38B7B /* Info.plist */,
 			);
 			path = MSFNetworkLayerUITests;
+			sourceTree = "<group>";
+		};
+		93D9A3E01CE86FA400B7A98F /* GSRequest */ = {
+			isa = PBXGroup;
+			children = (
+				9357E2A81CE869DF003633A9 /* GSRequestManager.h */,
+				9357E2A91CE869DF003633A9 /* GSRequestManager.m */,
+				93D9A3E11CE86FA400B7A98F /* Cache */,
+				93D9A3E61CE86FA400B7A98F /* GSBaseRequest.h */,
+				93D9A3E71CE86FA400B7A98F /* GSBaseRequest.mm */,
+				93D9A3E81CE86FA400B7A98F /* GSDebugLabel.h */,
+				93D9A3E91CE86FA400B7A98F /* GSDebugLabel.m */,
+			);
+			path = GSRequest;
+			sourceTree = "<group>";
+		};
+		93D9A3E11CE86FA400B7A98F /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				93D9A3E21CE86FA400B7A98F /* GSCache.h */,
+				93D9A3E31CE86FA400B7A98F /* GSCache.m */,
+				93D9A3E41CE86FA400B7A98F /* GSCacheObject.h */,
+				93D9A3E51CE86FA400B7A98F /* GSCacheObject.m */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		93D9A4111CE8CF2600B7A98F /* util */ = {
+			isa = PBXGroup;
+			children = (
+				93D9A4151CE8CF4200B7A98F /* AFNetworkReachabilityManager.h */,
+				93D9A4161CE8CF4200B7A98F /* AFNetworkReachabilityManager.m */,
+				93D9A4121CE8CF2600B7A98F /* UIView+Positioning.h */,
+				93D9A4131CE8CF2600B7A98F /* UIView+Positioning.m */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,10 +378,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93D9A3EF1CE86FA400B7A98F /* GSDebugLabel.m in Sources */,
+				9357E2AA1CE869DF003633A9 /* GSRequestManager.m in Sources */,
+				93D9A3ED1CE86FA400B7A98F /* GSCacheObject.m in Sources */,
 				9341BCAF1CDF314600E38B7B /* ViewController.m in Sources */,
+				93D9A3EC1CE86FA400B7A98F /* GSCache.m in Sources */,
 				9341BCAC1CDF314600E38B7B /* AppDelegate.m in Sources */,
 				933C6CBF1CE3178D002C9B67 /* MSFNetworkProxy.mm in Sources */,
+				93D9A3EE1CE86FA400B7A98F /* GSBaseRequest.mm in Sources */,
 				9341BCA91CDF314600E38B7B /* main.m in Sources */,
+				93D9A4141CE8CF2600B7A98F /* UIView+Positioning.m in Sources */,
+				93D9A4171CE8CF4200B7A98F /* AFNetworkReachabilityManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

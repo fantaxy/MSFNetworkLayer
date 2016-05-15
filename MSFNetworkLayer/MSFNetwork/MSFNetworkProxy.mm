@@ -30,6 +30,16 @@ void GetInt32Ptr(int *to, unsigned char * from)
     MsfSDK *_msfSDK;
 }
 
++ (instancetype)getInstance
+{
+    static MSFNetworkProxy *staticInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        staticInstance = [[self alloc] init];
+    });
+    return staticInstance;
+}
+
 - (instancetype)init
 {
     if (self = [super init]) {
@@ -38,9 +48,10 @@ void GetInt32Ptr(int *to, unsigned char * from)
     return self;
 }
 
-- (int)preSendWupBuffer
+- (NSNumber *)preSendWupBuffer
 {
-    return [_msfSDK getNextSendPacketSeqId];
+    int seq = [_msfSDK getNextSendPacketSeqId];
+    return @(seq);
 }
 
 - (BOOL)sendWupBuffer:(unsigned char *)pWup cmd:(NSString *)cmd resendSeq:(int)iResendReq seq:(int *)pSeq immediately:(BOOL)bImmediately timeOut:(int)iInterval
