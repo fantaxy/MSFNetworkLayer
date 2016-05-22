@@ -77,7 +77,7 @@ void GetInt32Ptr(int *to, unsigned char * from)
     
     if(iResendReq > 0)
     {
-        [dict setObject:[NSString stringWithFormat:@"%d", iResendReq] forKey:@"seqId"];
+        [dict setObject:@(iResendReq) forKey:@"seqId"];
     }
     int retSeq = [_msfSDK sendPacket:dict];
     
@@ -125,21 +125,18 @@ void GetInt32Ptr(int *to, unsigned char * from)
 - (void)onMSFPacketState:(NSDictionary*)aDict
 {
     int state = [aDict[@"state"] intValue];
-    NSString* cmd = aDict[@"serviceCmd"];
-    NSData* data = aDict[@"recvData"];
-    NSString* seqId = aDict[@"seq"];
+    NSString *cmd = aDict[@"cmd"];
+    NSData *data = aDict[@"recvData"];
+    NSNumber *seqId = aDict[@"seqId"];
     
     if(state == EMSFPacket_Success && [data length] > 0) {
         
-        if([cmd length] == 0 || [seqId length] == 0 || [data length] < 4) {
+        if([cmd length] == 0 || !seqId || [data length] < 4) {
             return;
         }
         
         [_msfDelegate OnMSFPacketState:aDict];
-        [_msfDelegate OnMSFRecvDataFromBackend:[cmd UTF8String]
-                                           buf:(unsigned char*)[data bytes]
-                                        bufLen:(int)[data length]
-                                           seq:(int)[seqId intValue]];
+        [_msfDelegate OnMSFRecvDataFromBackend:cmd buf:data seq:seqId];
     }
     else {
         // 注意：该分支有3种情况：

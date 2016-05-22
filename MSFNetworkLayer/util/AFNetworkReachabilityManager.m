@@ -143,6 +143,11 @@ static void AFNetworkReachabilityReleaseCallback(const void *info) {
     return manager;
 }
 
+- (instancetype)init
+{
+    return [self initWithReachability:nil];
+}
+
 - (instancetype)initWithReachability:(SCNetworkReachabilityRef)reachability {
     self = [super init];
     if (!self) {

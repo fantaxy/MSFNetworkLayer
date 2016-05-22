@@ -13,7 +13,7 @@
 @protocol IMSFDelegate<NSObject>
 @optional
 //! 透传结果通知
-- (void)OnMSFRecvDataFromBackend:(const char*)aCmd buf:(unsigned char*)aBuf bufLen:(int)aBufLen seq:(int)aSeq;
+- (void)OnMSFRecvDataFromBackend:(NSString *)aCmd buf:(NSData *)aData seq:(NSNumber *)aSeq;
 //! SSO下发的A2错误通知
 - (void)OnMSFSSOErrorStateResult:(NSDictionary*)aDict;
 //! 网络状态的通知，包括以下情况：

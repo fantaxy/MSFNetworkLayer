@@ -9,6 +9,8 @@
 #import "GSRequestManager.h"
 #import "MSFNetworkProxy.h"
 
+#import <MsfSDK/MsfSDK.h>
+
 @interface GSRequestOperation : NSObject
 
 @property (nonatomic, strong) GSBaseRequest *request;
@@ -69,12 +71,36 @@
 
 - (void)OnMSFPacketState:(NSDictionary*)aDict
 {
-    
+    NSString *strServiceCmd = aDict[@"cmd"];
+    NSNumber *seqId = aDict[@"seqId"];
+    int iState = [aDict[@"state"] intValue];
+//    int iFailReason = [aDict[@"failReason"] intValue];
+    GSRequestOperation *wrapRequest = self.dispatchTable[seqId];
+    GSBaseRequest *request = wrapRequest.request;
+    if (request) {
+        if (iState == EMSFPacket_Fail) {
+            NSString * errTips = aDict[@"errTips" ];
+            FATLog(@"Request %@ failed for reason: %@", strServiceCmd, errTips);
+            request.errorMessage = errTips;
+            wrapRequest.failBlock(request, nil);
+            self.dispatchTable[seqId] = nil;
+        }
+        else if(iState == EMSFPacket_Success && request) {
+            self.dispatchTable[seqId] = nil;
+        }
+        else {
+            wrapRequest.failBlock(request, nil);
+        }
+    }
 }
 
-- (void)OnMSFRecvDataFromBackend:(const char*)aCmd buf:(unsigned char*)aBuf bufLen:(int)aBufLen seq:(int)aSeq
+- (void)OnMSFRecvDataFromBackend:(NSString *)aCmd buf:(NSData *)aData seq:(NSNumber *)aSeq
 {
-    
+    GSRequestOperation *wrapRequest = self.dispatchTable[aSeq];
+    GSBaseRequest *request = wrapRequest.request;
+    NSDictionary *userInfo = [request notifyRespBuffer:[aData bytes] len:(int)aData.length seq:[aSeq intValue]];
+    wrapRequest.successBlock(request, userInfo);
+    self.dispatchTable[aSeq] = nil;
 }
 
 - (void)OnMSFSSOErrorStateResult:(NSDictionary*)aDict
